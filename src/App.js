@@ -63,8 +63,6 @@ import './App.css';
         return (
           <div>
 
-            
-
             <div className='cards'>
 
           <div className='image'>
