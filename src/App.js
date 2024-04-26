@@ -47,10 +47,6 @@ import './App.css';
       
       <div className="App">
 
-      <button onClick={BackButton}>Atras</button>
-      <button onClick={NextButton}>Siguiente</button>
-      
-
       <p>{list.map(element => {
         return (
           <div>
@@ -68,12 +64,18 @@ import './App.css';
           </div>
           
           </div>
+
+          
          
         )
+        
 
       })}</p>
-        
-        
+      
+      <div className='buttons'>
+         <button onClick={BackButton}>Atras</button>
+         <button onClick={NextButton}>Siguiente</button>
+         </div>
       
 
       </div>
