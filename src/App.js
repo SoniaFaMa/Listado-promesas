@@ -12,42 +12,42 @@ import './App.css';
     // lista es el valor
     // setLista es una funcion que modifica lista
     // El valor iniciar es lo que le paso a useState, en este caso un array vacio
-    const [lista,setLista]=useState([])
+    const [list,setList]=useState([])
    
       useEffect(()=>{
 
 
         fetch("https://reqres.in/api/users?page=1") 
-        .then(respuesta => respuesta.json())
-        .then((datos)=>{
+        .then(response => response.json())
+        .then((data)=>{
 
-          setLista(datos.data)
+          setList(data.data)
           // lista = datos.data
         })
          
       },[])
 
-      function BotonSiguiente(){
+      function NextButton(){
         fetch("https://reqres.in/api/users?page=2") 
-       .then(respuesta => respuesta.json())
-        .then((datos)=>{
+       .then(response => response.json())
+        .then((data)=>{
     
-        setLista(datos.data)
+        setList(data.data)
 
         })
 
       }
 
-      function BotonAtras(){
+      function BackButton(){
         fetch("https://reqres.in/api/users?page=1") 
-       .then(respuesta => respuesta.json())
-        .then((datos)=>{
+       .then(response => response.json())
+        .then((data)=>{
 
-        setLista(datos.data)
+        setList(data.data)
 
         })
       }
-      
+
     // count = valor inicial
     // setCount= funcion que actualiza el valor del estado
     // (0) = valor inicial de la variable de estado que se está declarando
@@ -56,26 +56,26 @@ import './App.css';
     return (
       
       <div className="App">
-        <button onClick={BotonAtras} >atras</button>
-      <button onClick={BotonSiguiente}>siguiente</button>
+        <button onClick={BackButton}>Atras</button>
+      <button onClick={NextButton}>Siguiente</button>
       
        {/* <EjemploCount/> */}
        {/* <SeconPage/> */}
 
-      <p>{lista.map(elemento => {
+      <p>{list.map(element => {
         return (
           <div>
 
             <div className='cards'>
 
           <div className='image'>
-            <img src={elemento.avatar}></img>
+            <img src={element.avatar}></img>
           </div>
           
-          <div className='first_name'><b>First name:</b> {elemento.first_name}</div>
-          <div className='last_name'><b>Last name:</b> {elemento.last_name}</div>
-          <div className='id'><b>Id:</b> {elemento.id}</div>
-          <div className='email'><b>Email:</b> {elemento.email}</div>
+          <div className='first_name'><b>First name:</b> {element.first_name}</div>
+          <div className='last_name'><b>Last name:</b> {element.last_name}</div>
+          <div className='id'><b>Id:</b> {element.id}</div>
+          <div className='email'><b>Email:</b> {element.email}</div>
           </div>
           
           </div>
