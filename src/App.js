@@ -1,17 +1,11 @@
 
 import { useEffect,useState } from 'react';
 import './App.css';
-// import EjemploCount from './EjemploCount';
-// import SeconPage from './SeconPage';
 
-  // el estado es un objeto que contiene datos y pueden cambiar
-  //useState permite añadir estado a los componentes
-  //un Hook permite utilizar el estado y otras cosas en componentes
+
   function App() {
 
-    // lista es el valor
-    // setLista es una funcion que modifica lista
-    // El valor iniciar es lo que le paso a useState, en este caso un array vacio
+    
     const [list,setList]=useState([])
    
       useEffect(()=>{
@@ -22,7 +16,7 @@ import './App.css';
         .then((data)=>{
 
           setList(data.data)
-          // lista = datos.data
+          
         })
          
       },[])
@@ -48,19 +42,14 @@ import './App.css';
         })
       }
 
-    // count = valor inicial
-    // setCount= funcion que actualiza el valor del estado
-    // (0) = valor inicial de la variable de estado que se está declarando
-    //useState se renderiza automaticamente el componente cada vez que cambie el valor del estado
-   
+    
     return (
       
       <div className="App">
-        <button onClick={BackButton}>Atras</button>
+
+      <button onClick={BackButton}>Atras</button>
       <button onClick={NextButton}>Siguiente</button>
       
-       {/* <EjemploCount/> */}
-       {/* <SeconPage/> */}
 
       <p>{list.map(element => {
         return (
@@ -83,7 +72,7 @@ import './App.css';
         )
 
       })}</p>
-        {/* <p>{lista}</p> */}
+        
         
       
 
@@ -92,7 +81,7 @@ import './App.css';
        
     );
   }
-  //<button onClick={() => setCount(count +1)}>Click me</button>
+  
   export default App;
 
 
