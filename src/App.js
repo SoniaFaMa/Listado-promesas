@@ -47,11 +47,7 @@ import './App.css';
 
         })
       }
-
-    
-
       
-
     // count = valor inicial
     // setCount= funcion que actualiza el valor del estado
     // (0) = valor inicial de la variable de estado que se está declarando
