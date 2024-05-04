@@ -3,10 +3,10 @@ import UserCard from "../UserCard/UserCard"
 import './dataList.css';
 
 
-export default function DataList(){
+export default function DataList({page}){
 
     const [list,setList]=useState([])
-    const [page,setPage]=useState(1) 
+    
   
     useEffect(()=>{
   
