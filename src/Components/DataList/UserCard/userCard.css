@@ -1,0 +1,12 @@
+.cards{
+    
+    background-color:#F9EBEA ;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    font-family: Courier New, monospace;
+    border-radius: 10px;
+    border: black 2px solid;
+
+}
