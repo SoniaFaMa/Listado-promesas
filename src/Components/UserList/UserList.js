@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import UserCard from "../UserCard/UserCard"
-import './dataList.css';
+import './userList.css';
 
 
-export default function DataList({page}){
+export default function UserList({page}){
 
     const [list,setList]=useState([])
     
@@ -21,11 +21,11 @@ export default function DataList({page}){
   
     return (
       <div>
-    <p>{list.map(element => {
+    <p className="users">{list.map(user => {
       
       return (<div>
   
-        <UserCard item={element}/>
+        <UserCard user={user}/>
   
       </div>
       )

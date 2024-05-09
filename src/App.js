@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import DataList from './Components/DataList/DataList';
+import UserList from './Components/UserList/UserList';
 import './App.css';
 
 
@@ -27,12 +27,12 @@ function App() {
       
     return (
       <div className="App">
-          <DataList page={page} />
+          <UserList page={page} />
 
        <div className='buttons'>
             
-            <button onClick={BackButton}>Atras</button>
-            <button onClick={NextButton}>Siguiente</button>
+            <button className='button' onClick={BackButton}>Atras</button>
+            <button className='button' onClick={NextButton}>Siguiente</button>
          </div>
      
      </div>
