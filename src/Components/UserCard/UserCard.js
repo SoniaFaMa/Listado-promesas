@@ -10,8 +10,8 @@ import './userCard.css'
     
       <div className='cards'>
   
-      <div className='image'>
-        <img src={user.avatar}></img>
+      <div>
+        <img className='image' src={user.avatar}></img>
       </div>
       
       <div className='first_name'><b>First name:</b> {user.first_name}</div>
